@@ -3,13 +3,12 @@ import { motion } from 'framer-motion'
 import { doux } from './Motion.jsx'
 import Franchise from './Franchise.jsx'
 
-// Informations de l'éditeur : à remplacer dès que la société porteuse est immatriculée.
+// Informations de l'éditeur : ajouter le capital et le numéro RCS dès l'immatriculation de la société.
 export const EDITEUR = {
-  nom: '[Raison sociale à compléter]',
-  statut: '[forme juridique et capital à compléter]',
-  immatriculation: '[RCS / SIREN à compléter]',
-  adresse: '[adresse du siège à compléter]',
-  directeur: '[nom du directeur de la publication à compléter]',
+  nom: 'DOMEA',
+  statut: "société par actions simplifiée (SAS) en cours d'immatriculation",
+  adresse: '58 rue de Ponthieu, 75008 Paris',
+  directeur: 'le Président de DOMEA SAS',
   email: 'contact@domea-services.com',
 }
 
@@ -98,8 +97,8 @@ function Mentions() {
     <>
       <h2>Éditeur du site</h2>
       <p>
-        Le site domea-services.com est édité par {EDITEUR.nom}, {EDITEUR.statut}, immatriculée sous le numéro {EDITEUR.immatriculation},
-        dont le siège est situé {EDITEUR.adresse}. Contact : <Mail />.
+        Le site domea-services.com est édité par {EDITEUR.nom}, {EDITEUR.statut}, dont le siège est situé {EDITEUR.adresse}.
+        Contact : <Mail />.
       </p>
       <p>Directeur de la publication : {EDITEUR.directeur}.</p>
 
@@ -166,7 +165,7 @@ function DonneesPersonnelles() {
       </p>
 
       <h2>Responsable du traitement</h2>
-      <p>{EDITEUR.nom}, {EDITEUR.adresse} · <Mail />.</p>
+      <p>{EDITEUR.nom} SAS, {EDITEUR.adresse} · <Mail />.</p>
 
       <h2>Données traitées</h2>
       <p>
