@@ -1,0 +1,37 @@
+name: Vérification du domaine
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verif-domaine.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DOMAINE: domea-services.com
+    steps:
+      - name: Enregistrements DNS
+        run: |
+          for ns in 8.8.8.8 1.1.1.1 dns106.ovh.net; do
+            echo "== $ns"
+            dig +short "$DOMAINE" A @"$ns"
+            dig +short "www.$DOMAINE" CNAME @"$ns"
+          done
+      - name: Réponse du site
+        run: |
+          for url in "http://$DOMAINE" "https://$DOMAINE" "https://www.$DOMAINE"; do
+            echo "== $url"
+            curl -sS -o /dev/null -m 20 -w '%{http_code} -> %{redirect_url}\n' "$url" || true
+          done
+      - name: État GitHub Pages
+        run: gh api "repos/$GITHUB_REPOSITORY/pages" || true
+      - name: Imposer HTTPS
+        continue-on-error: true
+        run: gh api -X PUT "repos/$GITHUB_REPOSITORY/pages" -F https_enforced=true -f cname="$DOMAINE"
