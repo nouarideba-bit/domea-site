@@ -61,7 +61,7 @@ export function usePage() {
       window.scrollTo(0, 0)
       document.title = `${PAGES[page].titre} · DOMEA`
     } else {
-      document.title = "DOMEA · Hôtel de convalescence près de l'hôpital"
+      document.title = "DOMEA · L'art de se rétablir"
       const cible = window.location.hash && document.getElementById(window.location.hash.slice(1))
       if (cible) requestAnimationFrame(() => cible.scrollIntoView())
     }
