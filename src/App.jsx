@@ -10,6 +10,7 @@ import {
 } from 'framer-motion'
 import { Cascade, Compteur, Item, Photo, Reveal, doux } from './components/Motion.jsx'
 import * as I from './components/Icones.jsx'
+import { Page, usePage } from './components/Pages.jsx'
 
 const EMAIL = 'contact@domea-services.com'
 
@@ -24,24 +25,27 @@ const liens = [
 ]
 
 export default function App() {
+  const page = usePage()
   return (
     <MotionConfig reducedMotion="user">
       <BarreProgression />
       <Entete />
-      <main>
-        <Heros />
-        <Constat />
-        <Solution />
-        <Sejours />
-        <Parcours />
-        <Journee />
-        <Proches />
-        <Etablissements />
-        <Projet />
-        <BandeauJardin />
-        <Faq />
-        <Contact />
-      </main>
+      {page ? <Page cle={page} /> : (
+        <main>
+          <Heros />
+          <Constat />
+          <Solution />
+          <Sejours />
+          <Parcours />
+          <Journee />
+          <Proches />
+          <Etablissements />
+          <Projet />
+          <BandeauJardin />
+          <Faq />
+          <Contact />
+        </main>
+      )}
       <Pied />
     </MotionConfig>
   )
@@ -548,6 +552,12 @@ function Projet() {
             </Item>
           ))}
         </Cascade>
+        <Reveal className="projet-franchise">
+          <p>Vous souhaitez ouvrir un établissement DOMEA près d'un hôpital de votre région ?</p>
+          <motion.a href="#devenir-franchise" className="bouton bouton-plein" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+            Devenir franchisé <I.Fleche />
+          </motion.a>
+        </Reveal>
       </div>
     </section>
   )
@@ -681,13 +691,24 @@ function Contact() {
                 </motion.small>
               )}
             </AnimatePresence>
-            {!envoye && <small>Vos informations servent uniquement à vous répondre. Elles ne sont ni conservées sur ce site, ni partagées.</small>}
+            {!envoye && <small>Vos informations servent uniquement à vous répondre. Elles ne sont ni conservées sur ce site, ni partagées. <a href="#donnees-personnelles">Données personnelles</a></small>}
           </form>
         </Reveal>
       </div>
     </section>
   )
 }
+
+const informations = [
+  ['#mentions-legales', 'Informations légales'],
+  ['#plan-du-site', 'Plan du site'],
+  ['#donnees-personnelles', 'Données personnelles'],
+  ['#accessibilite', 'Accessibilité : non conforme'],
+  ['#tarifs-et-conditions', 'Tarifs et conditions'],
+  ['#ia-responsable', 'IA responsable'],
+  ['#cookies', 'Politique et gestion des cookies'],
+  ['#signaler-un-contenu', 'Signaler un contenu'],
+]
 
 function Pied() {
   return (
@@ -704,16 +725,24 @@ function Pied() {
           </div>
           <div>
             <h4>Partenaires</h4>
-            <ul>{liens.slice(4).map(([h, l]) => <li key={h}><a href={h}>{l}</a></li>)}<li><a href="#contact">Contact</a></li></ul>
+            <ul>
+              {liens.slice(4).map(([h, l]) => <li key={h}><a href={h}>{l}</a></li>)}
+              <li><a href="#devenir-franchise">Devenir franchisé</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Informations</h4>
+            <ul>{informations.map(([h, l]) => <li key={h}><a href={h}>{l}</a></li>)}</ul>
           </div>
         </div>
-        <div className="mentions" id="mentions">
+        <div className="mentions">
           <p>
             DOMEA est un projet d'hébergement temporaire non médicalisé, en préparation. Les soins y seront assurés par des professionnels de santé
             en coordination avec l'hôpital partenaire ; DOMEA n'est pas un établissement de santé. Les tarifs et chiffres présentés sont indicatifs
             et issus du prévisionnel du projet (scénario central). Les photos sont des visuels d’intention.
           </p>
-          <p>© {new Date().getFullYear()} DOMEA · domea-services.com</p>
+          <p>© Domea {new Date().getFullYear()}</p>
         </div>
       </div>
     </footer>
