@@ -303,6 +303,33 @@ p {
   color: #dfe4d6;
 }
 
+.heros-embleme {
+  display: block;
+  margin-bottom: 22px;
+}
+
+.heros-signature {
+  margin-top: 14px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  color: #e6d5b8;
+}
+
+.pied-embleme {
+  display: block;
+  margin: 6px 0 10px;
+}
+
+.pied-signature {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--creme);
+  margin-bottom: 10px !important;
+}
+
 .heros .chapo {
   font-size: 1.2rem;
   color: rgba(251, 250, 247, 0.88);

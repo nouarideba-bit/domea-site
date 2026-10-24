@@ -11,6 +11,7 @@ import {
 import { Cascade, Compteur, Item, Photo, Reveal, doux } from './components/Motion.jsx'
 import * as I from './components/Icones.jsx'
 import { Page, usePage } from './components/Pages.jsx'
+import Fenetre from './components/Fenetre.jsx'
 
 const EMAIL = 'contact@domea-services.com'
 
@@ -122,7 +123,7 @@ function Heros() {
   const yPhoto = useTransform(scrollY, [0, 800], [0, 160])
   const echelle = useTransform(scrollY, [0, 800], [1.05, 1.15])
   const yTexte = useTransform(scrollY, [0, 600], [0, -60])
-  const mots = ['Se', 'rétablir', 'près', 'de', "l'hôpital,"]
+  const mots = ["L'art", 'de', 'se']
 
   return (
     <section className="heros" id="haut">
@@ -133,6 +134,7 @@ function Heros() {
       <div className="heros-voile" />
 
       <motion.div className="conteneur heros-contenu" style={{ y: yTexte }}>
+        <Fenetre className="heros-embleme" largeur={92} trait="#fbfaf7" delai={0.2} />
         <motion.span className="surtitre" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
           Hôtel de convalescence · Site pilote de 60 chambres
         </motion.span>
@@ -147,9 +149,12 @@ function Heros() {
           <motion.em style={{ display: 'inline-block' }}
             initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: doux, delay: 0.35 + mots.length * 0.08 }}>
-            comme à la maison.
+            rétablir.
           </motion.em>
         </h1>
+        <motion.p className="heros-signature" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}>
+          Le soin, avec l'élégance d'un grand hôtel.
+        </motion.p>
         <motion.p className="chapo" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1 }}>
           DOMEA accueille les patients avant et après une opération, et leurs proches, au pied d'un hôpital partenaire.
           Le confort d'un hôtel, une équipe soignante présente jour et nuit, pour environ trois fois moins qu'une journée d'hospitalisation.
@@ -717,6 +722,8 @@ function Pied() {
         <div className="pied-grille">
           <div>
             <a href="#haut" className="logo"><I.Logo /> DOMEA</a>
+            <Fenetre className="pied-embleme" largeur={64} trait="rgba(255, 253, 249, 0.85)" dessiner={false} />
+            <p className="pied-signature">L'art de se rétablir.</p>
             <p>Le bon soin, au bon endroit, au juste prix. Hôtel de convalescence au pied de l'hôpital, pour les patients et leurs proches.</p>
           </div>
           <div>
