@@ -115,7 +115,7 @@ function Mentions() {
       <h2>Nature du projet</h2>
       <p>
         DOMEA est un projet d'hébergement temporaire non médicalisé, actuellement en préparation. Aucune réservation n'est possible à ce stade.
-        Les soins seront assurés par des professionnels de santé en coordination avec l'hôpital partenaire : DOMEA n'est pas un établissement de santé.
+        Les soins seront assurés par une HAD partenaire et les professionnels qu'elle coordonne : DOMEA n'est pas un établissement de santé et ne réalise aucun soin.
       </p>
       <p>
         Les informations publiées sur ce site sont générales et n'ont pas valeur de conseil médical. Les tarifs, chiffres et calendriers sont
@@ -295,22 +295,22 @@ function Tarifs() {
       <table className="page-tableau">
         <tbody>
           <tr><th>Avant l'opération</th><td><strong>130 €</strong> la nuit · la veille d'une intervention, pour arriver reposé et à l'heure.</td></tr>
-          <tr><th>Après l'opération</th><td><strong>environ 480 €</strong> la nuit (fourchette étudiée : 420 à 540 €) · soins courants coordonnés, pension complète et présence soignante jour et nuit comprises.</td></tr>
+          <tr><th>Après l'opération</th><td><strong>340 € HT</strong> la nuit · hébergement, pension complète et services hôteliers, hors soins. Les soins sont assurés et facturés par l'HAD partenaire.</td></tr>
           <tr><th>Accompagnant</th><td><strong>110 €</strong> la nuit · pour rester tout près du patient pendant son séjour.</td></tr>
         </tbody>
       </table>
 
       <h2>Prise en charge</h2>
       <p>
-        Une partie du séjour pourra être couverte par le forfait d'hébergement temporaire non médicalisé de l'Assurance Maladie, versé à l'hôpital,
-        selon les conditions réglementaires en vigueur. Le complément fait l'objet de discussions avec les hôpitaux et les mutuelles.
+        L'hébergement est réglé par le patient, avec le concours éventuel de sa mutuelle ou de son contrat d'assistance. Les soins sont pris en
+        charge par l'Assurance Maladie via l'HAD partenaire, selon les règles habituelles. Des garanties dédiées sont en discussion avec les mutuelles.
         Les modalités définitives seront publiées avant l'ouverture.
       </p>
 
       <h2>Contrats</h2>
       <ul>
         <li><strong>Séjours</strong> : des conditions générales de vente seront publiées avant l'ouverture des réservations, avec le détail des prix, des modalités d'annulation et du droit de rétractation applicable.</li>
-        <li><strong>Établissements de santé</strong> : chaque partenariat fera l'objet d'une convention précisant les critères d'admission, la coordination des soins et le retour en service.</li>
+        <li><strong>Établissements de santé</strong> : chaque partenariat fera l'objet d'une convention précisant les critères d'admission, le partage des rôles entre l'hôtel et les soignants, et la conduite à tenir en cas d'urgence.</li>
         <li><strong>Franchise</strong> : voir la page <a href="#devenir-franchise">Devenir franchisé</a>.</li>
       </ul>
     </>

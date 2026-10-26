@@ -153,11 +153,11 @@ function Heros() {
           </motion.em>
         </h1>
         <motion.p className="heros-signature" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}>
-          Le soin, avec l'élégance d'un grand hôtel.
+          L'hospitalité d'un grand hôtel, au pied de l'hôpital.
         </motion.p>
         <motion.p className="chapo" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1 }}>
           DOMEA accueille les patients avant et après une opération, et leurs proches, au pied d'un hôpital partenaire.
-          Le confort d'un hôtel, une équipe soignante présente jour et nuit, pour environ trois fois moins qu'une journée d'hospitalisation.
+          Un hôtel hospitalier : le confort d'un grand hôtel, et des soins assurés comme à domicile par une structure d'hospitalisation à domicile (HAD) partenaire.
         </motion.p>
         <motion.div className="heros-actions" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.15 }}>
           <motion.a href="#sejours" className="bouton bouton-plein" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -230,8 +230,8 @@ function Constat() {
 function Solution() {
   const piliers = [
     { icone: <I.Lit />, titre: 'Le confort d’un hôtel', texte: 'Chambres spacieuses, salle d’eau adaptée, restaurant, salon et jardin. On s’y repose vraiment, loin de l’agitation d’un service.' },
-    { icone: <I.Coeur />, titre: 'Des soins coordonnés', texte: 'Infirmiers et aides-soignants présents jour et nuit, kinésithérapeutes, médecin coordonnateur à temps partiel, télésurveillance.' },
-    { icone: <I.Lien />, titre: 'Relié à l’hôpital', texte: 'Convention avec le service qui vous a opéré, dossier partagé et retour garanti dans le service en cas de besoin.' },
+    { icone: <I.Coeur />, titre: 'Des soins par l’HAD partenaire', texte: 'Les soins sont assurés comme à domicile par l’HAD partenaire et les professionnels qu’elle coordonne. DOMEA ne réalise aucun soin.' },
+    { icone: <I.Lien />, titre: 'Relié à l’hôpital', texte: 'Convention avec l’établissement de santé et avec l’HAD, accueil 24 h sur 24 et protocole d’alerte écrit.' },
   ]
   return (
     <section className="section">
@@ -258,7 +258,7 @@ function Solution() {
         </Cascade>
         <Reveal className="bandeau-ratio" delay={0.1}>
           <strong>÷3</strong>
-          <p>Une nuit DOMEA, soins courants et pension compris, coûte environ trois fois moins qu'une journée en chirurgie.</p>
+          <p>Une nuit DOMEA hors soins et la prise en charge par l'HAD coûtent ensemble environ trois fois moins qu'une journée en chirurgie.</p>
         </Reveal>
       </div>
     </section>
@@ -283,12 +283,12 @@ const sejours = [
     onglet: 'Après',
     moment: 'De J+1 à J+10 · le cœur de DOMEA',
     titre: 'Une convalescence entourée et rassurante.',
-    texte: 'Dès que le chirurgien juge le patient stable, souvent le lendemain, il prescrit le transfert vers DOMEA. Le patient récupère dans un cadre apaisant, avec les soins dont il a besoin.',
-    points: ['Pansements, gestion de la douleur, rééducation quotidienne', 'Repas validés par un diététicien', 'Télésurveillance et téléconsultation avec le chirurgien', 'Retour à domicile préparé avec les soignants de ville'],
-    prix: '480 €',
-    detail: 'la nuit, soins courants et pension compris (tarif indicatif)',
+    texte: 'Lorsque le médecin prescrit une hospitalisation à domicile, l’HAD peut proposer au patient de séjourner chez DOMEA. Il récupère dans un cadre apaisant, et l’HAD lui apporte les soins dont il a besoin, comme chez lui.',
+    points: ['Chambre adaptée dans un espace patients à accès contrôlé', 'Pension complète, en chambre ou au restaurant', 'Soins assurés par l’HAD partenaire, facturés par elle', 'Accueil 24 h sur 24 et appel relié à la réception'],
+    prix: '340 € HT',
+    detail: 'la nuit, pension complète, hors soins (tarif indicatif)',
     photo: 'soins.jpg',
-    alt: 'Une soignante et un kinésithérapeute accompagnent des patients en convalescence',
+    alt: 'Des patients en convalescence dans les espaces de DOMEA',
   },
   {
     id: 'avec',
@@ -355,8 +355,8 @@ function Parcours() {
   const etapes = [
     { n: 1, quand: 'Étape 1 · La veille', titre: 'Avant : arriver serein', texte: 'Le patient venu de loin dort sur place et rejoint le bloc à pied le matin.', badge: '130 €', sous: 'la nuit' },
     { n: 2, quand: 'Étape 2 · Jour J', titre: 'L’opération à l’hôpital', texte: 'L’intervention et la première surveillance ont lieu dans le service. Le chirurgien décide du transfert quand le patient est stable.', badge: 'Hôpital', sous: 'bloc et réveil' },
-    { n: 3, quand: 'Étape 3 · De J+1 à J+10', titre: 'Après : la convalescence', texte: 'Soins, rééducation avec les kinés, repas adaptés et téléconsultation, dans un cadre apaisant.', badge: '480 €', sous: 'la nuit, tout compris' },
-    { n: 4, quand: 'Étape 4 · Le retour', titre: 'Le retour à domicile préparé', texte: 'Ordonnances, matériel, passage de l’infirmier et du kiné libéraux : tout est organisé avant le départ.', badge: 'Ville', sous: 'relais libéraux' },
+    { n: 3, quand: 'Étape 3 · De J+1 à J+10', titre: 'Après : la convalescence', texte: 'Un séjour au calme dans l’espace patients ; les soins sont assurés par l’HAD partenaire, comme à domicile.', badge: '340 € HT', sous: 'la nuit, hors soins' },
+    { n: 4, quand: 'Étape 4 · Le retour', titre: 'Le retour à domicile préparé', texte: 'L’HAD et l’équipe soignante organisent le retour ; DOMEA s’occupe du transport et des bagages.', badge: 'Ville', sous: 'relais libéraux' },
   ]
   return (
     <section className="section" id="parcours">
@@ -364,7 +364,7 @@ function Parcours() {
         <Reveal className="entete-section">
           <span className="surtitre">04 · Le parcours patient</span>
           <h2>Quatre étapes, un seul fil conducteur.</h2>
-          <p className="chapo">Du soir qui précède l'opération jusqu'au retour à la maison, DOMEA organise chaque étape avec l'hôpital et les soignants de ville.</p>
+          <p className="chapo">Du soir qui précède l'opération jusqu'au retour à la maison, DOMEA accompagne chaque étape côté hébergement, en lien avec l'hôpital et l'HAD partenaire.</p>
         </Reveal>
         <RailParcours etapes={etapes} />
         <Reveal className="note-proches">
@@ -400,13 +400,12 @@ function RailParcours({ etapes }) {
 
 function Journee() {
   const horaires = [
-    ['7 h 30', 'Passage infirmier : constantes, douleur, traitement.'],
     ['8 h 30', 'Petit-déjeuner en chambre ou au restaurant.'],
-    ['10 h', 'Séance de kinésithérapie et marche accompagnée.'],
+    ['10 h', 'Visite des professionnels de l’HAD, dans l’intimité de la chambre.'],
     ['12 h 30', 'Déjeuner adapté, partagé avec un proche.'],
-    ['15 h', 'Pansement, puis téléconsultation avec le chirurgien.'],
-    ['17 h', 'Repos au jardin ou au salon.'],
-    ['Nuit', 'Infirmier et aide-soignant présents, appel possible à toute heure.'],
+    ['15 h', 'Promenade au jardin ou lecture au salon.'],
+    ['19 h 30', 'Dîner au restaurant ou en chambre.'],
+    ['Nuit', 'Accueil présent 24 h sur 24, appel relié à la réception ; permanence de l’HAD joignable à toute heure.'],
   ]
   return (
     <section className="section journee">
@@ -423,14 +422,14 @@ function Journee() {
             ))}
           </Cascade>
           <Cascade className="equipe">
-            <Item className="carte"><strong>2+2</strong><p>infirmiers et aides-soignants présents en permanence</p></Item>
-            <Item className="carte"><strong>3</strong><p>kinésithérapeutes pour la rééducation quotidienne</p></Item>
-            <Item className="carte"><strong>1</strong><p>médecin coordonnateur à temps partiel</p></Item>
-            <Item className="carte"><strong>48</strong><p>emplois au total : soin, accueil et restauration</p></Item>
+            <Item className="carte"><strong>24/24</strong><p>accueil hôtelier présent jour et nuit</p></Item>
+            <Item className="carte"><strong>2</strong><p>espaces distincts : un espace patients à accès contrôlé, un espace ouvert aux proches</p></Item>
+            <Item className="carte"><strong>HAD</strong><p>les soins sont assurés par une structure d’hospitalisation à domicile partenaire</p></Item>
+            <Item className="carte"><strong>0</strong><p>acte de soins réalisé ou facturé par DOMEA</p></Item>
             <Item className="securite">
               <h3>La sécurité avant tout</h3>
               <ul>
-                {['Critères d’admission validés par le chirurgien', 'Télésurveillance avec seuils d’alerte', 'Retour garanti dans le service', 'Protocole écrit des soins autorisés'].map((t) => (
+                {['Admission décidée par l’HAD selon ses critères', 'Protocole d’alerte écrit : 15, puis permanence de l’HAD', 'Personnel formé aux premiers secours', 'Aucune donnée de santé détenue par l’hôtel'].map((t) => (
                   <li key={t}><I.Bouclier width={18} height={18} />{t}</li>
                 ))}
               </ul>
@@ -474,12 +473,12 @@ function Etablissements() {
   const cibles = [
     { titre: 'Hôpitaux publics et CHU', texte: 'Libérer des lits, réduire la durée de séjour et rattraper les listes d’attente. Un lit libéré, c’est une nouvelle admission.' },
     { titre: 'Cliniques privées', texte: 'Développer l’ambulatoire et la récupération rapide (RAAC) en orthopédie, bariatrique ou urologie, avec une sortie à J+1 sereine.' },
-    { titre: 'Mutuelles et assureurs', texte: 'Réduire le coût des complications et des réhospitalisations avec un forfait « convalescence DOMEA » intégrable aux garanties.' },
+    { titre: 'Mutuelles et assureurs', texte: 'Proposer à leurs assurés une prise en charge de l’hébergement après une opération, intégrable aux garanties.' },
   ]
   const barres = [
     { label: 'Journée en chirurgie', v: 1700, couleur: '#c9774f' },
     { label: 'Journée en médecine', v: 1300, couleur: '#e7a47c' },
-    { label: 'Nuit DOMEA, tout compris', v: 480, couleur: '#1f4d4a' },
+    { label: 'Nuit DOMEA, hors soins', v: 340, couleur: '#1f4d4a' },
   ]
   return (
     <section className="section etablissements" id="etablissements">
@@ -512,7 +511,7 @@ function Etablissements() {
               <span><Compteur valeur={b.v} suffixe=" €" /></span>
             </div>
           ))}
-          <p className="source">Coûts hospitaliers : moyennes publiées (d'après l'Assurance Maladie). Prix DOMEA indicatif, scénario central du projet.</p>
+          <p className="source">Coûts hospitaliers : moyennes publiées (d'après l'Assurance Maladie). Prix DOMEA indicatif, hébergement et pension, hors soins : les soins sont facturés par l'HAD partenaire.</p>
         </Reveal>
       </div>
     </section>
@@ -523,8 +522,8 @@ function Projet() {
   const etapes = [
     ['Hôpital pilote', 'Choisir la ville et obtenir une lettre d’intention.'],
     ['Mesure du besoin', 'Compter avec l’hôpital les journées qui pourraient se faire chez DOMEA.'],
-    ['Cadre juridique', 'Valider l’hébergement et les soins coordonnés avec l’ARS.'],
-    ['Article 51', 'Déposer une expérimentation pour financer le séjour au-delà du forfait hôtelier.'],
+    ['Cadre juridique', 'Présenter le modèle hôtel hospitalier et HAD partenaire à l’ARS.'],
+    ['Article 51', 'Étudier avec l’hôpital et l’HAD une expérimentation de parcours, évaluée.'],
     ['Bâtiment', 'Identifier un bâtiment à reconvertir près de l’hôpital.'],
     ['Financeurs', 'Présenter le dossier à la Banque des Territoires.'],
   ]
@@ -569,10 +568,10 @@ function Projet() {
 }
 
 const questions = [
-  ['DOMEA est-il une clinique ?', 'Non. DOMEA est un hébergement temporaire non médicalisé, situé au pied d’un hôpital partenaire. Les soins y sont assurés par des professionnels de santé, en coordination avec le service qui a opéré le patient. Les patients qui ont besoin d’une surveillance médicale continue restent à l’hôpital.'],
-  ['Qui peut séjourner chez DOMEA ?', 'Un patient stable, dont le séjour est prescrit ou validé par son chirurgien selon des critères d’admission écrits avec l’hôpital. Les proches peuvent l’accompagner pendant tout le séjour.'],
-  ['Combien coûte un séjour et qui le paie ?', 'Les tarifs affichés sont indicatifs : 130 € la nuit avant l’opération, environ 480 € la nuit de convalescence (soins courants et pension compris), 110 € pour un accompagnant. Une partie peut être couverte par le forfait d’hébergement temporaire de l’Assurance Maladie versé à l’hôpital, le complément étant en cours de discussion avec les hôpitaux et les mutuelles.'],
-  ['Que se passe-t-il en cas de problème ?', 'Une télésurveillance avec seuils d’alerte est suivie en lien avec le service d’origine, et le retour dans le service est garanti par la convention signée avec l’hôpital.'],
+  ['DOMEA est-il une clinique ?', 'Non. DOMEA est un hébergement temporaire non médicalisé, situé au pied d’un hôpital partenaire. Les soins y sont assurés, comme à domicile, par une HAD partenaire et les professionnels qu’elle coordonne ; DOMEA ne réalise aucun soin. Les patients qui ont besoin d’une surveillance médicale continue restent à l’hôpital.'],
+  ['Qui peut séjourner chez DOMEA ?', 'La veille d’une opération, tout patient qui habite loin. Après l’opération, un patient stable pris en charge par l’HAD partenaire, qui décide de son admission selon ses critères. Les proches peuvent l’accompagner pendant tout le séjour.'],
+  ['Combien coûte un séjour et qui le paie ?', 'Les tarifs affichés sont indicatifs : 130 € la nuit avant l’opération, 340 € HT la nuit de convalescence (pension complète, hors soins), 110 € pour un accompagnant. L’hébergement est réglé par le patient, avec le concours éventuel de sa mutuelle ; les soins sont pris en charge par l’Assurance Maladie via l’HAD.'],
+  ['Que se passe-t-il en cas de problème ?', 'L’accueil est présent 24 h sur 24 et chaque chambre dispose d’un appel relié à la réception. En cas d’urgence, le personnel appelle le 15 puis la permanence de l’HAD, qui assure la continuité des soins jour et nuit.'],
   ['Quand et où DOMEA ouvrira-t-il ?', 'L’ouverture du premier site, de 60 chambres, est visée en 2028. Toulouse, Lyon et le sud de Paris sont envisagés. Laissez-nous vos coordonnées pour être informé.'],
   ['Notre établissement peut-il devenir partenaire ?', 'Oui, nous recherchons un hôpital pilote. Écrivez-nous via le formulaire ci-dessous : nous vous présenterons le projet et la manière de mesurer ensemble le besoin dans vos services.'],
 ]
@@ -745,8 +744,8 @@ function Pied() {
         </div>
         <div className="mentions">
           <p>
-            DOMEA est un projet d'hébergement temporaire non médicalisé, en préparation. Les soins y seront assurés par des professionnels de santé
-            en coordination avec l'hôpital partenaire ; DOMEA n'est pas un établissement de santé. Les tarifs et chiffres présentés sont indicatifs
+            DOMEA est un projet d'hébergement temporaire non médicalisé, en préparation. Les soins y seront assurés par une HAD partenaire
+            et les professionnels qu'elle coordonne ; DOMEA n'est pas un établissement de santé et ne réalise aucun soin. Les tarifs et chiffres présentés sont indicatifs
             et issus du prévisionnel du projet (scénario central). Les photos sont des visuels d’intention.
           </p>
           <p>© Domea {new Date().getFullYear()}</p>
