@@ -11,7 +11,7 @@ const apports = [
   [I.Bouclier, 'Un cadre juridique balisé', "Le modèle d'hébergement temporaire non médicalisé, les conventions types avec l'hôpital et les partenaires de soins (HAD, infirmiers libéraux)."],
   [I.Lien, "La relation avec l'hôpital", "Une méthode pour mesurer le besoin avec les services de chirurgie, écrire les critères d'admission et organiser le retour en service."],
   [I.Lit, 'Un concept prêt à construire', "Cahier des charges des chambres et des espaces communs, identité DOMEA, parcours patient et accompagnant."],
-  [I.Coeur, "La qualité des soins coordonnés", "Protocoles, télésurveillance avec seuils d'alerte, formation des équipes d'accueil et de soins."],
+  [I.Coeur, "La qualité du partenariat de soins", "Convention type avec l'HAD, protocole d'alerte, formation des équipes d'accueil, sans aucun soin réalisé par l'hôtel."],
   [I.Famille, "L'expérience des proches", 'Offre accompagnants, restauration, salon et jardin : tout ce qui fait de DOMEA un lieu où l’on se sent chez soi.'],
   [I.Lune, "L'accompagnement dans la durée", "Ouverture assistée, outils de réservation et de pilotage, achats groupés, animation du réseau."],
 ]
@@ -66,7 +66,7 @@ export default function Franchise() {
         <Item className="carte"><strong><Compteur valeur={60} /></strong><p>chambres, le format type d'un établissement</p></Item>
         <Item className="carte"><strong><Compteur valeur={10} suffixe=" M€" /></strong><p>d'investissement environ, immobilier compris (prévisionnel du pilote)</p></Item>
         <Item className="carte"><strong><Compteur valeur={48} /></strong><p>emplois directs créés sur le territoire</p></Item>
-        <Item className="carte"><strong><Compteur valeur={147} /></strong><p>hôtels hospitaliers en France, et aucun avec des soins coordonnés</p></Item>
+        <Item className="carte"><strong><Compteur valeur={147} /></strong><p>hôtels hospitaliers en France, et aucun pensé pour les patients en HAD</p></Item>
       </Cascade>
 
       <section className="franchise-bloc">
