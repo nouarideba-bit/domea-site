@@ -1745,3 +1745,274 @@ p {
   background: var(--creme);
   color: var(--vert);
 }
+
+/* Espace confidentiel */
+.bouton:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.bouton-petit {
+  padding: 10px 18px;
+  font-size: 0.88rem;
+}
+
+.lien-bouton {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--vert);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.espace-connexion {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--creme);
+  border-radius: var(--rayon);
+  box-shadow: 0 0 0 1px var(--ligne), var(--ombre);
+  padding: 44px 40px 36px;
+}
+
+.espace-sceau {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--vert);
+  color: var(--creme);
+  margin-bottom: 22px;
+}
+
+.espace-connexion h2 {
+  font-size: 1.7rem;
+  color: var(--vert);
+}
+
+.espace-aide {
+  color: var(--gris);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.espace-formulaire {
+  display: grid;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.espace-formulaire h3 {
+  color: var(--vert);
+}
+
+.espace-formulaire small {
+  color: var(--gris);
+  font-size: 0.82rem;
+}
+
+.espace-connexion .bouton {
+  justify-content: center;
+}
+
+.espace-message {
+  min-height: 1.2em;
+  color: #9b3b2f;
+  font-size: 0.92rem;
+}
+
+.espace-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ligne);
+  color: var(--gris);
+  font-size: 0.85rem;
+}
+
+.espace-note svg {
+  flex: none;
+  color: var(--terre);
+  margin-top: 2px;
+}
+
+.espace-barre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: var(--sable);
+  border-radius: 16px;
+  margin-bottom: 28px;
+}
+
+.espace-barre > div:first-child {
+  display: grid;
+  gap: 2px;
+}
+
+.espace-connecte {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+  color: var(--vert);
+}
+
+.espace-maj {
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+.espace-actions,
+.espace-ligne {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.espace-ligne {
+  justify-content: space-between;
+}
+
+.espace-case {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--gris);
+}
+
+.espace-reglages {
+  overflow: hidden;
+}
+
+.espace-reglages-inner {
+  background: var(--creme);
+  border-radius: var(--rayon);
+  box-shadow: 0 0 0 1px var(--ligne);
+  padding: 30px 32px;
+  margin-bottom: 28px;
+  max-width: 720px;
+}
+
+.espace-reglages-inner .espace-formulaire {
+  margin-top: 0;
+}
+
+.espace-etapes {
+  margin: 16px 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+  color: var(--encre);
+}
+
+.espace-etapes a {
+  color: var(--vert);
+  text-underline-offset: 3px;
+}
+
+.espace-rubrique {
+  margin-top: 40px;
+}
+
+.espace-rubrique h2 {
+  font-size: 1.45rem;
+  color: var(--vert);
+  margin-bottom: 14px;
+}
+
+.espace-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--ligne);
+}
+
+.espace-doc {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--ligne);
+}
+
+.espace-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--terre);
+  border: 1px solid var(--terre-clair);
+  border-radius: 8px;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.espace-doc h3 {
+  font-size: 1.08rem;
+  color: var(--encre);
+}
+
+.espace-doc p {
+  color: var(--gris);
+  font-size: 0.93rem;
+  margin-top: 4px;
+}
+
+.espace-doc small {
+  display: block;
+  margin-top: 6px;
+  color: var(--gris);
+  font-size: 0.8rem;
+}
+
+.espace-doc-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.espace-confidentialite {
+  margin-top: 48px;
+  font-size: 0.85rem;
+  color: var(--gris);
+  max-width: 760px;
+}
+
+@media (max-width: 640px) {
+  .espace-connexion {
+    padding: 32px 22px 26px;
+  }
+
+  .espace-doc {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .espace-type {
+    width: 64px;
+  }
+
+  .espace-reglages-inner {
+    padding: 24px 20px;
+  }
+
+  .espace-reglages-inner .champs-duo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.espace-reglages-inner > div > .bouton {
+  margin-top: 18px;
+}
