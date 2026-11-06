@@ -18,7 +18,7 @@ const apports = [
 
 const attentes = [
   "Un terrain ou un bâtiment à reconvertir à proximité immédiate d'un hôpital qui pratique la chirurgie programmée.",
-  "Une capacité d'investissement adaptée à un établissement d'environ 60 chambres, seul ou avec des partenaires financiers.",
+  "Une capacité d'investissement adaptée à un établissement d'environ 100 chambres, seul ou avec des partenaires financiers.",
   "Une implantation locale et l'envie de travailler main dans la main avec les équipes hospitalières.",
   "L'adhésion à la promesse DOMEA : le bon soin, au bon endroit, au juste prix.",
 ]
@@ -58,14 +58,14 @@ export default function Franchise() {
   return (
     <div className="franchise">
       <Reveal className="franchise-annonce">
-        <strong>Le réseau ouvre après le site pilote.</strong> Le premier établissement DOMEA, de 60 chambres, est visé pour 2028.
+        <strong>Le réseau ouvre après le site pilote.</strong> Le premier établissement DOMEA, de 100 chambres, est visé pour 2028.
         Nous constituons dès maintenant le cercle des futurs franchisés : les premiers candidats pourront choisir leur territoire.
       </Reveal>
 
       <Cascade className="impact franchise-chiffres">
-        <Item className="carte"><strong><Compteur valeur={60} /></strong><p>chambres, le format type d'un établissement</p></Item>
-        <Item className="carte"><strong><Compteur valeur={10} suffixe=" M€" /></strong><p>d'investissement environ, immobilier compris (prévisionnel du pilote)</p></Item>
-        <Item className="carte"><strong><Compteur valeur={48} /></strong><p>emplois directs créés sur le territoire</p></Item>
+        <Item className="carte"><strong><Compteur valeur={100} /></strong><p>chambres, le format type d'un établissement</p></Item>
+        <Item className="carte"><strong><Compteur valeur={16} suffixe=" M€" /></strong><p>d'investissement environ, immobilier compris (prévisionnel du pilote)</p></Item>
+        <Item className="carte"><strong><Compteur valeur={30} /></strong><p>emplois directs créés sur le territoire, hors soignants de l’HAD</p></Item>
         <Item className="carte"><strong><Compteur valeur={147} /></strong><p>hôtels hospitaliers en France, et aucun pensé pour les patients en HAD</p></Item>
       </Cascade>
 

@@ -136,7 +136,7 @@ function Heros() {
       <motion.div className="conteneur heros-contenu" style={{ y: yTexte }}>
         <Fenetre className="heros-embleme" largeur={92} trait="#fbfaf7" delai={0.2} />
         <motion.span className="surtitre" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-          Hôtel de convalescence · Site pilote de 60 chambres
+          Hôtel de convalescence · Site pilote de 100 chambres
         </motion.span>
         <h1>
           {mots.map((m, i) => (
@@ -533,13 +533,13 @@ function Projet() {
         <Reveal className="entete-section">
           <span className="surtitre">08 · Le projet</span>
           <h2>Moins cher pour la collectivité, utile pour le territoire.</h2>
-          <p className="chapo">Un site pilote de 60 chambres, avec une ouverture visée en 2028, puis un modèle reproductible près d'autres hôpitaux.</p>
+          <p className="chapo">Un site pilote de 100 chambres accessibles de 25 m² (80 pour les patients, 20 pour les proches et le public), avec une ouverture visée en 2028, puis un modèle reproductible près d'autres hôpitaux.</p>
         </Reveal>
         <Cascade className="impact">
-          <Item className="carte"><strong><Compteur valeur={60} /></strong><p>chambres sur le site pilote</p></Item>
-          <Item className="carte"><strong><Compteur valeur={40} /></strong><p>lits d’hôpital libérés, l’équivalent d’un service</p></Item>
-          <Item className="carte"><strong><Compteur valeur={15} suffixe=" M€" /></strong><p>de coûts hospitaliers évités chaque année en croisière</p></Item>
-          <Item className="carte"><strong><Compteur valeur={48} /></strong><p>emplois directs, locaux et non délocalisables</p></Item>
+          <Item className="carte"><strong><Compteur valeur={100} /></strong><p>chambres sur le site pilote, dont 80 pour les patients</p></Item>
+          <Item className="carte"><strong><Compteur valeur={64} /></strong><p>lits d’hôpital libérés, l’équivalent de deux services</p></Item>
+          <Item className="carte"><strong><Compteur valeur={24} suffixe=" M€" /></strong><p>de coûts hospitaliers évités chaque année en croisière</p></Item>
+          <Item className="carte"><strong><Compteur valeur={30} /></strong><p>emplois directs, locaux et non délocalisables, en plus des soignants de l’HAD</p></Item>
         </Cascade>
         <Reveal className="villes">
           <span className="surtitre" style={{ margin: 0 }}>Villes pilotes envisagées</span>
@@ -572,7 +572,7 @@ const questions = [
   ['Qui peut séjourner chez DOMEA ?', 'La veille d’une opération, tout patient qui habite loin. Après l’opération, un patient stable pris en charge par l’HAD partenaire, qui décide de son admission selon ses critères. Les proches peuvent l’accompagner pendant tout le séjour.'],
   ['Combien coûte un séjour et qui le paie ?', 'Les tarifs affichés sont indicatifs : 130 € la nuit avant l’opération, 340 € HT la nuit de convalescence (pension complète, hors soins), 110 € pour un accompagnant. L’hébergement est réglé par le patient, avec le concours éventuel de sa mutuelle ; les soins sont pris en charge par l’Assurance Maladie via l’HAD.'],
   ['Que se passe-t-il en cas de problème ?', 'L’accueil est présent 24 h sur 24 et chaque chambre dispose d’un appel relié à la réception. En cas d’urgence, le personnel appelle le 15 puis la permanence de l’HAD, qui assure la continuité des soins jour et nuit.'],
-  ['Quand et où DOMEA ouvrira-t-il ?', 'L’ouverture du premier site, de 60 chambres, est visée en 2028. Toulouse, Lyon et le sud de Paris sont envisagés. Laissez-nous vos coordonnées pour être informé.'],
+  ['Quand et où DOMEA ouvrira-t-il ?', 'L’ouverture du premier site, de 100 chambres, est visée en 2028. Toulouse, Lyon et le sud de Paris sont envisagés. Laissez-nous vos coordonnées pour être informé.'],
   ['Notre établissement peut-il devenir partenaire ?', 'Oui, nous recherchons un hôpital pilote. Écrivez-nous via le formulaire ci-dessous : nous vous présenterons le projet et la manière de mesurer ensemble le besoin dans vos services.'],
 ]
 
