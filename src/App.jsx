@@ -734,6 +734,7 @@ function Pied() {
             <ul>
               {liens.slice(4).map(([h, l]) => <li key={h}><a href={h}>{l}</a></li>)}
               <li><a href="#devenir-franchise">Devenir franchisé</a></li>
+              <li><a href="#espace-confidentiel">Espace confidentiel</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>

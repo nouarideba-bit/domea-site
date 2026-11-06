@@ -12,6 +12,7 @@ export const Lieu = (p) => (<svg {...base} {...p}><path d="M12 21s-7-6.2-7-11.5A
 export const Fleche = (p) => (<svg {...base} width={18} height={18} {...p}><path d="M5 12h14M13 6l6 6-6 6" /></svg>)
 export const Plus = (p) => (<svg {...base} width={18} height={18} {...p}><path d="M12 5v14M5 12h14" /></svg>)
 export const Menu = (p) => (<svg {...base} {...p}><path d="M4 8h16M4 16h16" /></svg>)
+export const Cadenas = (p) => (<svg {...base} {...p}><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /><path d="M12 14.5v2" /></svg>)
 export const Croix = (p) => (<svg {...base} {...p}><path d="M6 6l12 12M18 6L6 18" /></svg>)
 
 export function Logo(props) {

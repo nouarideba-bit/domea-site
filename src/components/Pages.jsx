@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { doux } from './Motion.jsx'
 import Franchise from './Franchise.jsx'
+import Espace from './Espace.jsx'
 
 // Informations de l'éditeur : ajouter le capital et le numéro RCS dès l'immatriculation de la société.
 export const EDITEUR = {
@@ -20,6 +21,13 @@ export const PAGES = {
     surtitre: 'Réseau DOMEA',
     chapo: "Ouvrez un hôtel de convalescence DOMEA au pied de l'hôpital de votre territoire, avec un concept, une méthode et un cadre déjà construits.",
     Contenu: Franchise,
+    large: true,
+  },
+  'espace-confidentiel': {
+    titre: 'Espace confidentiel',
+    surtitre: 'Partenaires et investisseurs',
+    chapo: 'Dossier pilote, prévisionnels et documents de travail du projet DOMEA, réservés aux personnes autorisées.',
+    Contenu: Espace,
     large: true,
   },
   'mentions-legales': { titre: 'Informations légales', Contenu: Mentions },
